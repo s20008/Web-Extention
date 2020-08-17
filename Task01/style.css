@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* メインデザイン */
+h1.main-style {
+    padding: 0.5em;
+    color: #010101;
+    font-size: 40px;
+	background: #f04e0e;
+	border-bottom: solid 3px #f4f819;
+}
+
+h2.main-style {
+    padding:0.5em;
+    color:white;
+    background: orange;
+}
+
+h3.main-style {
+    padding:0.5em;
+    color: green;
+    background: yellow;  
+}
+
+/* サイバーセキュリティ科 */
+#Task01-2-a .item {
+    border: 10px solid orange;
+    padding: 35px;
+    width: 625px;
+    height: 165px;
+    background-color: yellow;
+
+}
+#Task01-2-a .item a {
+    color: #cccccc;
+    font-size: 30px;
+
+}
+
+#Task01-2-a .item a:hover {
+    color: rgb(250, 187, 70);
+}
+
+#Task01-2-a .item a:active {
+    color: rgb(216, 142, 5);
+}
+
+#Task01-2-a .item p {
+    padding-bottom: 1cm;
+}
+
+
+
+
+/* ボックス情報 */
+#Task01-2-a {
+    width: 1250px;
+    height: 900px;
+    background: url(./img/city-morning.jpg);
+    background-attachment: fixed;
+
+}
+
+#Task01-2-a .item01 {
+    width: 700px; 
+    height: 150px;
+    background: white url(./img/robot.jpg)no-repeat right center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+
+#Task01-2-a .item01 h3 {
+	margin: 0.5em 0 0.5em 0;
+	font-size: 24px;
+}
+#Task01-2-a .item01 p {
+	margin: 0;
+	font-size: 16px;
+    color: black;
+    width: 500px;
+}
+/* ボックスを横に並べる */
+#Task01-2-a .wrapper {
+	overflow: hidden;
+}
+
+#Task01-2-a .item02 {
+	float: left;
+	margin: 32px 50px 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	padding: 8px;
+    width: 300px;
+    height: 350px;
+    background-color: white;
+}
+#Task01-2-a .item02 h3 {
+	margin: 0.5em 0 0.5em 0;
+	font-size: 20px;
+}
+#Task01-2-a .item02 p {
+	margin: 0;
+	font-size: 16px;
+	color :black;
+}
+
+
+/* ITスペシャリスト科 */
+
+#Task01-2-b .item {
+    border: 10px solid #740dfc;
+    padding: 35px;
+    width: 625px;
+    height: 165px;
+    background-color: #019bf5;
+
+}
+#Task01-2-b .item a {
+    color: #cccccc;
+    font-size: 30px;
+}
+
+#Task01-2-b .item a:hover {
+    color: #9e57fc;
+}
+
+#Task01-2-b .item a:active {
+    color: #5004b3;
+}
+
+#Task01-2-b .item p {
+    padding-bottom: 1cm;
+}
+
+
+
+
+/* ボックス情報 */
+#Task01-2-b {
+    width: 1250px;
+    height: 900px;
+    background: url(./img/city.jpg);
+    background-attachment: fixed;
+
+}
+
+#Task01-2-b .item01 {
+    width: 700px; 
+    height: 150px;
+    background: white url(./img/iot.jpg)no-repeat right center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+
+#Task01-2-b .item01 h3 {
+	margin: 0.5em 0 0.5em 0;
+	font-size: 24px;
+}
+#Task01-2-b .item01 p {
+	margin: 0;
+	font-size: 16px;
+    color: black;
+    width: 380px;
+}
+
+#Task01-2-b .wrapper {
+	overflow: hidden;
+}
+
+#Task01-2-b .item02 {
+	float: left;
+	margin: 32px 50px 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	padding: 8px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+}
+#Task01-2-b .item02 h3 {
+	margin: 0.5em 0 0.5em 0;
+	font-size: 20px;
+}
+#Task01-2-b .item02 p {
+	margin: 0;
+	font-size: 16px;
+	color :black;
+}
+
+#Task01-2-c {
+    width: 1250px;
+    height: 300px;
+    border-collapse: collapse;
+    background-color: rgb(5, 32, 122);
+    background-attachment: fixed;
+    color: white;    
+}
+
+#Task01-2-c table {
+    border-collapse: collapse;
+}
+
+#Task01-2-c tr:nth-child(even) {
+    background: brown;
+}
+
+#Task01-2-c tr, td, th {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+#Task01-2-c caption {
+    width: 1250px;
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+}
+
+
+#Task01-2-c a{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
