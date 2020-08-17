@@ -191,9 +191,10 @@ h3.main-style {
 	color :black;
 }
 
+/* テーブル */
 #Task01-2-c {
     width: 1250px;
-    height: 300px;
+    height: 350px;
     border-collapse: collapse;
     background-color: rgb(5, 32, 122);
     background-attachment: fixed;
