@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="ch11-form.html">
+    <title>フォームとデータを送受信する仕組み</title>
+</head>
+<style>
+    .required {
+        padding: 0.5em;
+        font-size: 0.75em;
+        color: #ff0000;
+    }
+
+    .ch11-01-d {
+        margin: 0;
+    }
+
+    .ch11-01-d form{
+        padding: 16px;
+    }
+
+    .ch11-01-d input {
+        box-sizing: border-box;
+    }
+
+    .ch11-01-d input[type="text"] {
+        margin: 0.5em 0;
+        padding: 0.5em;
+        width: 100%;
+        font-size:  16px;
+    }
+
+    .ch11-01-e input{
+        box-sizing: border-box;
+    }
+
+    .ch11-01-e input[type="text"] {
+        margin: 0.5em 0;
+        border: 1px solid #ccc;
+        padding: 0.75em;
+        width: 100%;
+        font-size: 16px;
+        color: #999;
+        border-radius: 6px;
+    }
+
+    .ch11-01-e input[type="text"]:focus {
+        background-color: #e2ecf6;
+    }
+
+    .ch11-01-h textarea{
+        box-sizing: border-box;
+    }
+
+    .ch11-01-h textarea {
+        margin: 0.5em 0;
+        border: 1px solid #ccc;
+        padding: 0.75em;
+        width: 100%;
+        height: 12em;
+        font-size: 16px;
+        color: #999;
+    }
+
+    .ch11-01-j {
+        margin: 0;
+    }
+
+    .ch11-01-j form {
+        padding: 16px;
+    }
+
+    .ch11-01-j p{
+        margin-bottom: 0;
+    }
+
+    .ch11-01-j ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .ch11-01-j li {
+        display: inline;
+        margin-right: 1em;
+    }
+
+    .ch11-01-m input[type="submit"] {
+        border: 1px solid #0086f9;
+        border-radius: 6px;
+        padding: 12px 48px;
+        font-size: 16px;
+        background: linear-gradient(0deg, #0086f9, #b6d6f7);
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .ch11-01-m input[type="submit"]:hover {
+        background: linear-gradient(0deg, #2894f9, #d2e4f7)
+    }
+
+    .ch11-01-m input[type="submit"]:active {
+        background: linear-gradient(0deg, #0074d8, #b6d6f7);
+    }
+
+    .ch11-02-a input,
+    textarea {
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .ch11-02-a input[type="text"],
+    input[type="email"] {
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .ch11-02-a textarea {
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 100%;
+        height: 200px;
+        font-size:  16px;
+    }
+
+    .ch11-02-a div {
+        text-align: center;
+    }
+
+    .ch11-02-a input[type="submit"] {
+        border: 1px solid #0086f9;
+        border-radius: 6px;
+        padding: 12px 48px;
+        font-size: 16px;
+        background: linear-gradient(0deg, #0086f9, #b6d6f7);
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .ch11-02-a input[type="submit"]:hover {
+        background: linear-gradient(0deg, #2894f9, #d2e4f7)
+    }
+
+    .ch11-02-a input[type="submit"]:active {
+        background: linear-gradient(0deg, #0074d8, #b6d6f7);
+    }
+</style>
+<body>
+<article>
+    <form action="#" method="post">
+        <p><label for="name-field">お名前</label><br>
+        <input type="text" name="name" id="name-field"></p>
+    </form>
+
+    <form action="#" method="post">
+        <p><label>お名前<br>
+        <input type="text" name="name" id="name-field"></label></p>
+    </form>
+
+    <form action="#">
+        <p><label for="name-field">お名前<span class="required">*必須</span></label><br>
+        <input type="text" name="name" id="name-field" required></p>
+    </form>
+
+    <section class="ch11-01-d">
+        <form action="#">
+            <p><label for="name-field">お名前</label><br>
+            <input type="text" name="name" id="name-field" required></p>  
+        </form>
+    </section>
+
+    <section class="ch11-01-e">
+        <form action="#">
+            <p><label for="name-field">お名前</label><br>
+            <input type="text" name="name" id="name-field" required></p>  
+        </form>
+    </section>
+
+    <section class="ch11-01-f">
+        <p><label for="pw-field">パスワード</label><br>
+        <input type="password" name="pw" id="pw-field"></p>
+
+        <p><label for="email-field">メールアドレス</label><br>
+        <input type="email" name="email" id="email-field"></p>
+
+        <p><label for="tel-field">お電話番号</label><br>
+        <input type="tel" name="tel" id="tel-field"></p>
+
+        <p><label for="number-field">目標回数</label><br>
+        <input type="number" name="number" id="number-field">回</p>
+    </section>
+
+    <section class="ch11-01-g">
+        <p><label for="comment">お問い合わせの内容</label><br>
+        <textarea name="comment" id="comment"></textarea></p>
+    </section>
+
+    <section class="ch11-01-h">
+        <p><label for="comment">お問い合わせの内容</label><br>
+        <textarea name="comment" id="comment"></textarea></p>
+    </section>
+
+    <section class="ch11-01-i">
+        <form action="#">
+            <p class="label-p">時刻の設定</p>
+            <!-- ラジオボタン -->
+            <ul class="input-group">
+                <li>
+                    <input type="radio" name="duration" id="r1" value="1" checked><label for="r1">いますぐ出発</label>
+                </li> 
+                <li>
+                    <input type="radio" name="duration" id="r2" value="2" checked><label for="r2">出発時刻</label>
+                </li>
+                <li>
+                    <input type="radio" name="duration" id="r3" value="3" checked><label for="r3">到着時刻</label>
+                </li>
+            </ul>
+            <p class="label-p">オプション</p>
+            <!-- チェックボックス -->
+            <ul class="input-group">
+                <li>
+                    <input type="checkbox" name="option" id="c1" value="1" checked><label for="c1">特急を優先</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="option" id="c2" value="2" checked><label for="c2">新幹線を優先</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="option" id="c3" value="3" checked><label for="c3">バスがあれば利用</label>
+                </li>
+            </ul>
+        </form>
+    </section>
+
+    <section class="ch11-01-j">
+        <form action="#">
+            <p class="label-p">時刻の設定</p>
+            <!-- ラジオボタン -->
+            <ul class="input-group">
+                <li>
+                    <input type="radio" name="duration" id="r1" value="1" checked><label for="r1">いますぐ出発</label>
+                </li> 
+                <li>
+                    <input type="radio" name="duration" id="r2" value="2" checked><label for="r2">出発時刻</label>
+                </li>
+                <li>
+                    <input type="radio" name="duration" id="r3" value="3" checked><label for="r3">到着時刻</label>
+                </li>
+            </ul>
+        </form>
+    </section>
+
+    <section class="ch11-01-k">
+        <label for="month">有効期限</label><br>
+        <select name="month" id="month">
+            <option value="" selected>月</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        /
+        <select name="year" id="year">
+            <option value="" selected>年</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>  
+    </section>
+
+    <section class="ch11-01-l">
+        <form action="#">
+            <p><input type="submit" name="submit" value="送信する" id="submit"></p>
+        </form>
+    </section>
+
+    <section class="ch11-01-m">
+        <form action="#">
+            <p><input type="submit" name="submit" value="送信する" id="submit"></p>
+        </form>
+    </section>
+
+    <section class="ch11-02-a">
+        <form action="#" method="POST" id="contact">
+            <p><label for="name-field">お名前</label><br>
+            <input type="text" name="name" id="name-field"></p>
+            <p><label for="email-field">メールアドレス</label><br>
+            <input type="email" name="email" id="email-field"></p>
+            <p><label for="comment">お問い合わせ</label><br>
+            <textarea name="comment" id="comment"></textarea></p>
+            <div class="submit-p"><input type="submit" value="送信する"　id="submit" name="submit"></div>
+        </form>
+    </section>
+</article>
+    
+</body>
+</html>
