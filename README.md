@@ -14,3 +14,9 @@ s20008
 10.chapter10 [テーブル](/chapter10/ch10-table.html)  
 11.Task01   [学科紹介](/Task01/index.html)  
 12.chapter11 [さまざまなフォーム部品](/chapter11/ch11-form.html)  
+13.chapter12 [ページ全体のレイアウトとナビゲーション](/chapter12/index.html)  
+ 
+
+ 
+ 
+ 
