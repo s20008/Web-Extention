@@ -6,10 +6,13 @@ body {
 }
 
 .container {
-    padding: 0 16px 0 16px;
     margin: 0 auto 0 auto;
-    /* max-width: 1000px; */
-    width: 980px;
+    max-width: 1000px;
+}
+
+section .container {
+    display: flex;
+    flex-flow: column;
 }
 
 nav {
@@ -35,15 +38,34 @@ main p:last-child{
     padding: 10px 10px 0 10px;
 }
 
-.main-inner {
+main {
     background: #fffde3;
     height: 400px;
     padding: 20px 10px 20px 10px;
 }
 
+.sidebar {
+    padding: 20px 10px 20px 10px;
+    background: #c0f5b9;
+}
+
 .sidebar-inner {
     background: #c0f5b9;
     padding: 20px 10px 20px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    section .container {
+        flex-flow: row;
+    }
+    main {
+        flex: 1 1 auto;
+        order: 2;
+    }
+    .sidebar {
+        flex: 0 0 340px;
+        order: 1;
+    }
 }
 
 footer {
