@@ -16,9 +16,4 @@ s20008
 12.chapter11 [さまざまなフォーム部品](/chapter11/ch11-form.html)  
 13.chapter12 [ページ全体のレイアウトとナビゲーション](/chapter12/index.html)  
 14.chapter13 [レスポンシブWebデザインのページを作成しよう](/chapter13/index.html) 
-
-
-　
- 
- 
  
