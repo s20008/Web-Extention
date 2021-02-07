@@ -15,13 +15,9 @@ s20008
 11.Task01   [学科紹介](/Task01/index.html)  
 12.chapter11 [さまざまなフォーム部品](/chapter11/ch11-form.html)  
 13.chapter12 [ページ全体のレイアウトとナビゲーション](/chapter12/index.html)  
-<<<<<<< HEAD
 14.chapter13 [レスポンシブWebデザインのページを作成しよう](/chapter13/index.html) 
-=======
-14.chapter13 [レスポンシブWebデザインのページを作成しよう](/chapter13/index.html)
 
 　
  
  
->>>>>>> 55f6bb64566d1483464ebc507ebf51747a84a62a
  
